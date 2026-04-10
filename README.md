@@ -1,88 +1,90 @@
+[简体中文](./README.zh-CN.md)
+
 # Vibe Coding Starter
 
-这是一个给 Codex 用的 vibe coding 脚手架仓库。仓库里预置了一组实用的 repo-local skills，以及两份 `AGENTS.md` 示例文件，方便你直接把它当成新项目模板来起步。
+This repository is a vibe coding starter for Codex. It comes with a set of practical repo-local skills and two sample `AGENTS.md` files, so you can use it as the starting point for a new project.
 
-最推荐的用法不是 fork，而是通过 GitHub 的 `Use this template` 功能直接生成你自己的仓库，然后在这个基础上继续开发、删减和定制。
+The best way to use it is not to fork it. Use GitHub's `Use this template` feature to create your own repository, then build on top of it, remove what you do not need, and tailor it to your workflow.
 
-## 这个仓库适合做什么
+## What this repository is for
 
-- 作为新的 Codex 项目模板
-- 作为团队内部的 vibe coding 基线仓库
-- 作为你自己的 skill 和协作规范起点
+- A starter template for a new Codex project
+- A baseline repository for team-wide vibe coding
+- A starting point for your own skills and collaboration rules
 
-## 仓库结构
+## Repository structure
 
-- `.agents/skills/`：本仓库内置的本地 skills，Codex 可以直接使用
-- `AGENTS-Python.md`：Python 项目的协作约束示例
-- `AGENTS-FastAPI.md`：FastAPI 项目的协作约束示例
+- `.agents/skills/`: local skills bundled with this repository and available to Codex
+- `AGENTS-Python.md`: a sample collaboration rules file for Python projects
+- `AGENTS-FastAPI.md`: a sample collaboration rules file for FastAPI projects
 
-## 如何基于这个模板开始
+## How to start from this template
 
-1. 在 GitHub 页面点击 `Use this template`
-2. 创建你自己的新仓库
-3. clone 新仓库到本地
+1. Click `Use this template` on GitHub
+2. Create your new repository
+3. Clone the new repository to your machine
 
 ```bash
 git clone <your-new-repo-url>
 cd <your-new-repo>
 ```
 
-然后按你的项目需要做三件事：
+Then do three things based on what your project needs:
 
-- 保留需要的 skills，删除不需要的 skills
-- 选择一份合适的 `AGENTS*.md` 作为起点，改成你的仓库规则
-- 补充你的项目代码、测试和工程配置
+- Keep the skills you want and delete the ones you do not
+- Pick a suitable `AGENTS*.md` file as your starting point and turn it into your repository rules
+- Add your project code, tests, and engineering setup
 
-## Codex 中如何使用这些 Skills
+## How to use these skills in Codex
 
-这些 skills 放在 `.agents/skills/` 下，属于 repo-local skills。Codex 在当前仓库工作时可以读取并使用它们。
+These skills live under `.agents/skills/`. They are repo-local skills, so Codex can read and use them while working in this repository.
 
-有两种常见用法：
+There are two common ways to use them:
 
-- 显式触发：在提示里直接写 `$think`、`$hunt`、`$check` 这类 skill 名称
-- 隐式触发：直接描述任务，例如“先帮我排查这个测试为什么挂了”，Codex 会按 skill 描述匹配并使用合适的 skill
+- Explicit trigger: write the skill name directly in your prompt, such as `$think`, `$hunt`, or `$check`
+- Implicit trigger: describe the task directly, such as "Help me find out why this test is failing first," and Codex will match the task to the right skill based on its description
 
-如果你希望行为更稳定，优先显式写 skill 名。比如：
+If you want more stable behavior, use explicit skill names. For example:
 
-- `$think 帮我设计这个新功能的实现方案`
-- `$hunt 看下为什么这个接口返回 500`
-- `$check 审一下这次改动`
-- `$agile-git 我现在要做一个新功能，先帮我处理分支和工作区`
+- `$think Help me design the implementation plan for this feature`
+- `$hunt Check why this endpoint returns 500`
+- `$check Review this change`
+- `$agile-git I am about to build a feature, help me sort out the branch and working tree first`
 
-## 内置 Skills 说明
+## Built-in skills
 
-| Skill | 什么时候用 | 它解决什么问题 |
+| Skill | When to use it | What it helps with |
 | :--- | :--- | :--- |
-| `$think` | 开始新功能、设计方案、架构决策前 | 先把思路收敛成清晰、可执行、可批准的方案 |
-| `$design` | 做 UI、组件、页面或视觉界面时 | 产出更有明确风格的设计，而不是平庸默认稿 |
-| `$check` | 完成实现后、提交前、合并前 | 审查 diff、发现风险、补做必要检查 |
-| `$hunt` | 排查报错、崩溃、异常行为、失败测试时 | 先找根因，再决定怎么修 |
-| `$write` | 明确要写作、改写、润色中英文文案时 | 把文案改得更自然，去掉 AI 味 |
-| `$learn` | 进入陌生领域、准备研究文章、整理资料时 | 按完整研究流程推进，而不是零散搜索 |
-| `$read` | 读取 URL、网页或 PDF 时 | 把外部内容抓成干净 Markdown 供 Codex 继续处理 |
-| `$health` | Codex 行为异常、工具权限不对、协作配置混乱时 | 检查当前仓库的协作环境和约束问题 |
-| `$agile-git` | 做新功能、修 bug、准备 commit、处理分支时 | 指导 Codex 在实现任务里安全地使用 Git |
+| `$think` | Before a new feature, implementation plan, or architecture decision | Turns rough ideas into a clear plan that people can execute and approve |
+| `$design` | When building UI, components, pages, or visual interfaces | Pushes the design toward a clear visual direction instead of a generic default |
+| `$check` | After implementation, before commit, or before merge | Reviews the diff, finds risks, and covers missing checks |
+| `$hunt` | When debugging errors, crashes, odd behavior, or failing tests | Finds the root cause before deciding on a fix |
+| `$write` | When you explicitly want to write, rewrite, or polish Chinese or English copy | Makes the writing read more naturally and strips out the AI tone |
+| `$learn` | When entering an unfamiliar area, preparing a research article, or organizing source material | Moves the work through a full research workflow instead of scattered searching |
+| `$read` | When reading a URL, web page, or PDF | Pulls external content into clean Markdown so Codex can keep working with it |
+| `$health` | When Codex behaves oddly, tool permissions look wrong, or collaboration rules feel messy | Checks the collaboration setup and repo constraints |
+| `$agile-git` | When building features, fixing bugs, preparing commits, or handling branches | Guides Codex to use Git safely during implementation work |
 
-## `AGENTS.md` 示例文件是干什么的
+## What the sample `AGENTS.md` files are for
 
-`AGENTS.md` 用来告诉 Codex：在这个仓库里应该怎么协作、怎么改代码、怎么跑检查、哪些事情不能做。
+`AGENTS.md` tells Codex how to work in your repository: how to collaborate, how to edit code, how to run checks, and what not to do.
 
-这个仓库附带两份示例：
+This repository includes two examples:
 
-- `AGENTS-Python.md`：适合通用 Python 项目
-- `AGENTS-FastAPI.md`：适合 FastAPI 项目
+- `AGENTS-Python.md`: fits general Python projects
+- `AGENTS-FastAPI.md`: fits FastAPI projects
 
-你通常会从其中一份开始，复制或改写成你自己的仓库级 `AGENTS.md`。一旦项目规则稳定下来，Codex 在这个仓库里工作时就会持续参考这些约束。
+Most teams start from one of them, then copy or rewrite it into a repository-level `AGENTS.md`. Once those rules settle down, Codex keeps using them while it works in the repository.
 
-## 建议的裁剪方式
+## How to trim this template down
 
-把这个模板用在真实项目里时，建议尽快做这些整理：
+When you use this template in a real project, clean it up early:
 
-- 删掉你不会用到的 skills
-- 保留与你技术栈匹配的 `AGENTS.md`
-- 把示例规则改成你团队真实会执行的规则
-- 在 `README.md` 里补上项目本身的启动、测试和发布方式
+- Remove the skills you will not use
+- Keep the `AGENTS.md` rules that match your stack
+- Rewrite the sample rules into rules your team will follow
+- Add your project's own setup, test, and release instructions to `README.md`
 
-## 参考
+## Reference
 
 - https://github.com/tw93/Waza
