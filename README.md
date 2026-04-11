@@ -60,6 +60,7 @@ If you want more stable behavior, use explicit skill names. For example:
 | `$check` | After implementation, before commit, or before merge | Reviews the diff, finds risks, and covers missing checks |
 | `$hunt` | When debugging errors, crashes, odd behavior, or failing tests | Finds the root cause before deciding on a fix |
 | `$write` | When you explicitly want to write, rewrite, or polish Chinese or English copy | Makes the writing read more naturally and strips out the AI tone |
+| `$write-a-prd` | When you want to write a PRD, plan a feature, or turn requirements into an implementation-ready issue | Drives user interviews, codebase exploration, and module design into a structured PRD |
 | `$learn` | When entering an unfamiliar area, preparing a research article, or organizing source material | Moves the work through a full research workflow instead of scattered searching |
 | `$read` | When reading a URL, web page, or PDF | Pulls external content into clean Markdown so Codex can keep working with it |
 | `$health` | When Codex behaves oddly, tool permissions look wrong, or collaboration rules feel messy | Checks the collaboration setup and repo constraints |
