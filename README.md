@@ -67,6 +67,12 @@ If you want more stable behavior, use explicit skill names. For example:
 | `$health` | When Codex behaves oddly, tool permissions look wrong, or collaboration rules feel messy | Checks the collaboration setup and repo constraints |
 | `$agile-git` | When building features, fixing bugs, preparing commits, or handling branches | Guides Codex to use Git safely during implementation work |
 
+## Newly added skill: `$anthropic-diagram`
+
+`$anthropic-diagram` is for turning ideas, systems, or workflows into editable `.drawio` diagrams. It is useful for architecture diagrams, process flows, comparison layouts, swimlanes, and other explanatory visuals that need to feel publication-ready instead of looking like default enterprise tooling.
+
+The skill is tuned for Anthropic-style editorial diagrams: warm palette, restrained use of color, clear information hierarchy, rounded containers, orthogonal connectors, and layouts that emphasize one main claim. It can work in both English and Chinese, and is especially useful when you want Codex to produce a diagram artifact that can still be refined manually in draw.io later.
+
 ## What the sample `AGENTS.md` files are for
 
 `AGENTS.md` tells Codex how to work in your repository: how to collaborate, how to edit code, how to run checks, and what not to do.
@@ -90,3 +96,4 @@ When you use this template in a real project, clean it up early:
 ## Reference
 
 - https://github.com/tw93/Waza
+- https://github.com/dingtingli/dtl-skills

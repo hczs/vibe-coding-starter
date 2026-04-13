@@ -67,6 +67,12 @@ cd <your-new-repo>
 | `$health` | Codex 行为异常、工具权限不对、协作配置混乱时 | 检查当前仓库的协作环境和约束问题 |
 | `$agile-git` | 做新功能、修 bug、准备 commit、处理分支时 | 指导 Codex 在实现任务里安全地使用 Git |
 
+## 新增 Skill：`$anthropic-diagram`
+
+`$anthropic-diagram` 用来把想法、系统结构或业务流程整理成可编辑的 `.drawio` 图。它适合生成架构图、流程图、对比图、泳道图，以及各种偏说明性的视觉表达，不只是画一个“能看”的图，而是产出后续还能继续在 draw.io 里手工调整的图稿。
+
+这个 skill 的重点是 Anthropic 博客那种偏 editorial 的图表风格：暖色画布、克制配色、清晰的信息层级、圆角容器、正交连线，以及围绕单一主结论组织版式。它支持英文和中文场景，适合在你希望 Codex 直接产出可交付图表文件时使用。
+
 ## `AGENTS.md` 示例文件是干什么的
 
 `AGENTS.md` 用来告诉 Codex：在这个仓库里应该怎么协作、怎么改代码、怎么跑检查、哪些事情不能做。
@@ -90,3 +96,4 @@ cd <your-new-repo>
 ## 参考
 
 - https://github.com/tw93/Waza
+- https://github.com/dingtingli/dtl-skills
