@@ -63,6 +63,7 @@ cd <your-new-repo>
 | `$write-a-prd` | 要写 PRD、规划新功能、或把需求整理成可落地 issue 时 | 通过用户访谈、代码库调研和模块设计沉淀出结构化 PRD |
 | `$learn` | 进入陌生领域、准备研究文章、整理资料时 | 按完整研究流程推进，而不是零散搜索 |
 | `$read` | 读取 URL、网页或 PDF 时 | 把外部内容抓成干净 Markdown 供 Codex 继续处理 |
+| `$anthropic-diagram` | 需要创建示意图、流程图、架构图、对比图或泳道图时 | 生成带有 Anthropic 博客视觉风格的 `.drawio` 编辑型图表 |
 | `$health` | Codex 行为异常、工具权限不对、协作配置混乱时 | 检查当前仓库的协作环境和约束问题 |
 | `$agile-git` | 做新功能、修 bug、准备 commit、处理分支时 | 指导 Codex 在实现任务里安全地使用 Git |
 

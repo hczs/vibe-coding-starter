@@ -63,6 +63,7 @@ If you want more stable behavior, use explicit skill names. For example:
 | `$write-a-prd` | When you want to write a PRD, plan a feature, or turn requirements into an implementation-ready issue | Drives user interviews, codebase exploration, and module design into a structured PRD |
 | `$learn` | When entering an unfamiliar area, preparing a research article, or organizing source material | Moves the work through a full research workflow instead of scattered searching |
 | `$read` | When reading a URL, web page, or PDF | Pulls external content into clean Markdown so Codex can keep working with it |
+| `$anthropic-diagram` | When creating diagrams, flowcharts, architecture visuals, comparison charts, or swimlanes | Produces editorial-style `.drawio` diagrams in Anthropic's blog visual language |
 | `$health` | When Codex behaves oddly, tool permissions look wrong, or collaboration rules feel messy | Checks the collaboration setup and repo constraints |
 | `$agile-git` | When building features, fixing bugs, preparing commits, or handling branches | Guides Codex to use Git safely during implementation work |
 
