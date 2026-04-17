@@ -1,4 +1,0 @@
-interface:
-  display_name: "Git Workflow"
-  short_description: "Use Git safely while doing repo work"
-  default_prompt: "Use $agile-git to manage branches, commits, and task-safe Git flow while implementing changes in this repository."
